@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Subjective Archive</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <style>
+        body {
+            background: silver;
+            color: #cb3922;            
+
+            font-family: "Apple Chancery";
+            margin: 0px;
+            font-size: 15px;
+            line-height: 1.25em;
+        }
+        table {
+            overflow-x: scroll;
+            align-items: last baseline;
+            border-spacing: 200px 50px;
+            margin-bottom: 10px;
+            height: 25vh;
+            width: 100vw;
+            padding-top: 50vh;
+            padding-bottom: 10vh;
+        }
+        td.objects {
+            border: solid .75px #cb3922;
+            height: 25vh;
+            text-align: center;
+        }
+        td.texts {
+            border: solid .75px #e0e0e0;
+            height: 25vh;
+            text-align: center;
+            color: #e0e0e0;
+        }
+        td:hover {
+            color: silver;
+
+            display: block;
+            width: 25vh;
+            height: 25vh;
+        }
+        .objects:hover {
+            background-color: #cb3922;
+        }
+        .texts:hover {
+            background-color: #cb3922;
+        }
+        td a {
+            width: 25vh;
+            height: 25vh;
+            position: absolute;
+            display: flex;
+            cursor: alias;
+        }
+        td.objects a:hover, td.texts a:hover {
+            border: solid silver;
+            border-radius: 5vh;
+            border-style: dotted;
+            height: 2.5em;
+            box-sizing: border-box;
+        }
+        .info {
+            color: #cb3922;
+
+            font-family: 'Times New Roman', Times, serif;
+            position: fixed;
+            width: 30vh;
+            font-size: 15px;
+            line-height: 1.25em;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            padding-left: 5vw;
+            padding-right: 55vw;
+            padding-top: 1em;
+            box-sizing: border-box;
+        }
+        .form {
+            color: #cb3922;
+
+            filter: blur(1px);
+            /**border-bottom: dotted;**/
+            text-decoration: none;
+            line-height: 1.5em;
+        }
+        .form:hover {
+            color: darkgrey;
+            filter: blur(.5px);
+        }
+        .stars {
+            color: darkgrey;
+            background-color: grey;
+
+            padding-top: .25em;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            filter: blur(1px);
+        }
+        .location-objects, .format-texts {            
+            text-align: center;
+            justify-content: center;
+            box-sizing: border-box;
+            align-items: flex-end;
+            position: relative;
+            width: 25vh;
+            color: silver;
+        }
+        .vellum-a, .vellum-b {
+            position: fixed;
+            transform: rotate(180deg);
+            filter: blur(.5px);
+            font-size: 15px;
+        }
+        .vellum-a {
+            color: #cb3922;
+        }
+        .vellum-b {
+            color: #cb3922;
+        }
+/**archive**/
+        #a {
+            left: 5px;
+            top: 1vh;
+        }
+        #b {
+            left: 15px;
+            top: 2vh;
+        }
+        #c {
+            left: 8px;
+            top: 3vh;
+        }
+        #d {
+            left: 10px;
+            top: 10vh;
+        }
+        #e {
+            left: 20px;
+            top: 11vh;
+        }
+        #f {
+            left: 30px;
+            top: 28vh;
+        }
+        #g {
+            left: 10px;
+            top: 33vh;
+        }
+/**subjective**/
+        #h {
+            right: 10px;
+            top: 50vh;
+        }
+        #i {
+            right: 5px;
+            top: 52vh;
+        }
+        #j {
+            right: 8px;
+            top: 54vh;
+        }
+        #k {
+            right: 28px;
+            top: 62vh;
+        }
+        #l {
+            right: 17px;
+            top: 63vh;
+        }
+        #m {
+            right: 20px;
+            top: 78vh;
+        }
+        #n {
+            right: 5px;
+            top: 79vh;
+        }
+        #o {
+            right: 12px;
+            top: 81vh;
+        }
+        #p {
+            right: 19px;
+            top: 92vh;
+        }
+        #q {
+            right: 30px;
+            top: 95vh;
+        }
+    </style>
+    </head>
+    <body onload="sortTable()">
+        <script>
+            function sortTable() {
+                let table = document.getElementById("contents");
+                let items = table.querySelectorAll("td");
+                let rows = Array.from(items)
+                shuffleArray(rows);
+                for (const row of rows) {
+                    table.appendChild(row);
+                }
+            }
+    
+            function shuffleArray(array) {
+                for (var i = array.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        </script>
+
+        <div class="vellum-a" id="a">A</div>
+        <div class="vellum-a" id="b">r</div>
+        <div class="vellum-a" id="c">c</div>
+        <div class="vellum-a" id="d">h</div>
+        <div class="vellum-a" id="e">i</div>
+        <div class="vellum-a" id="f">v</div>
+        <div class="vellum-a" id="g">e</div>
+
+        <div class="vellum-b" id="h">S</div>
+        <div class="vellum-b" id="i">u</div>
+        <div class="vellum-b" id="j">b</div>
+        <div class="vellum-b" id="k">j</div>
+        <div class="vellum-b" id="l">e</div>
+        <div class="vellum-b" id="m">c</div>
+        <div class="vellum-b" id="n">t</div>
+        <div class="vellum-b" id="o">i</div>
+        <div class="vellum-b" id="p">v</div>
+        <div class="vellum-b" id="q">e</div>
+
+        <div class="info">
+            <!--<div class="stars"></div>-->
+            <br><br>
+            Subjective Archive is a personal collection of projects and readings that gesture toward a personal and/or radical practice of museum-making.
+            <br><br>
+            If you want to submit entries, please click<a class="form" href="https://docs.google.com/forms/d/e/1FAIpQLSeZm7cS1kUdP-OH-kmb_4O5AWaMhama3fbfMeNP1DKIMiZzUQ/viewform?usp=send_form">here</a>
+        </div>
+        <table id="contents">
+            <!-- objects-->
+            <td class="objects">
+                <a target="_blank" href="https://www.mmuseumm.com/"></a>
+                Worldwide<br>Objects<br><div class="location-objects">New York City, New York</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://en.m.wikipedia.org/wiki/The_Museum_of_Innocence_(museum)"></a>
+                Fictional<br>Objects<div class="location-objects">Instanbul, Turkey</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://arkive.net/"></a>
+                Web3<br>Objects<div class="location-objects">Web</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://www.mjt.org/"></a>
+                Nonexistent<br>Objects<div class="location-objects">Los Angeles, California</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://musamexico.org/"></a>
+                To be coral<br>Objects<div class="location-objects">Cancun, Mexico</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://brokenships.com/"></a>
+                Breakup<br>Objects<div class="location-objects">Zagreb, Croatia</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://arcticworldarchive.org/"></a>
+                World memory<br>Objects<div class="location-objects">Longyearben, Svalbard</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://www.croptrust.org/work/svalbard-global-seed-vault/"></a>
+                Seed<br>Objects<div class="location-objects">Longyearben, Svalbard</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://www.arweave.org/"></a>
+                Data storage<br>Objects<div class="location-objects">web</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://www.demeureduchaos.com/"></a>
+                War<br>Objects<div class="location-objects">Saint-Romain-au-Mon-d'Or, France</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://www.kiseichu.org/e-top"></a>
+                Parasitic<br>Objects<div class="location-objects">Tokyo, Japan</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://www.venthaven.org/"></a>
+                Ventriloquist<br>Objects<div class="location-objects">Fort Mitchell, Kentucky</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://cryptozoologymuseum.com/"></a>
+                Mythical animal<br>Objects<div class="location-objects">Portland, Maine</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://www.chezgalip.com/_hair-museum_en"></a>
+                Hair<br>Objects<div class="location-objects">Cappadocia, Turkey</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://this-museum-is-not-obsolete.com/"></a>
+                Obsolete<br>Objects<div class="location-objects">Kent, UK</div>
+            </td>
+            <td class="objects"> 
+                <a target="_blank" href="https://micro.ooo/"></a>
+                Vending machine sized<br>Objects<div class="location-objects">Everywhere</div>
+            </td>
+            <td class="objects">
+                <a target="_blank" href="https://interspecieslibrary.com/"></a>
+                Interspecies<br>Objects<div class="location-objects">New York City, New York</div>
+            </td>
+
+            <!-- texts -->
+            <td class="texts">
+                <a target="_blank" href="http://www.bruno-latour.fr/sites/default/files/21-DRAWING-THINGS-TOGETHER-GB.pdf"></a>
+                Latour<br>Text<div class="format-texts">Journal article</div>
+            </td>
+            <td class="texts">
+                <a target="_blank" href="https://www.mbdb.hr/en/orhan-pamuk-a-modest-manifesto-for-museums/"></a>
+                Pamuk<br>Text<div class="format-texts">Manifesto</div>
+            </td>
+            <td class="texts">
+                <a target="_blank" href="https://kwarc.info/teaching/TDM/Borges.pdf"></a>
+                Borges<br>Text<div class="format-texts">Fiction</div>
+            </td>
+            <td class="texts">
+                <a target="_blank" href="https://academic.oup.com/chicago-scholarship-online/book/13800"></a>
+                Daston (ed.)<br>Text<div class="format-texts">Book</div>
+            </td>
+            <td class="texts">
+                <a target="_blank" href="https://centerforbookarts.org/calendar/conversation/de-extinction-mermaids-and-the-future-of-an-interspecies-library"></a>
+                Salguero, Pell<br>Text<div class="format-texts">Video</div>
+            </td>
+            <td class="texts">
+                <a target="_blank" href="https://archive.org/details/perfectvacuum0000lems"></a>
+                Lem<br>Text<div class="format-texts">Book</div>
+            </td>
+            <td class="texts">
+                <a target="_blank" href="https://readings.design/PDF/speculative-everything.pdf"></a>
+                Dunne, Raby<br>Text<div class="format-texts">Book</div>
+            </td>
+        </table>
+    </body>
+</html>
